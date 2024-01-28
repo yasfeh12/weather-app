@@ -17,7 +17,6 @@
     <h1>Weather Dashboard</h1>
   </header>
 
-  <!-- max-width for ultra wide resolutions -->
   <div class="container-fluid" style="max-width: 1400px">
     <div class="row">
       <aside class="col-lg-3 pb-3">
@@ -26,25 +25,24 @@
         </h2>
         <nav class="navbar navbar-light bg-light">
           <form class="form-inline" id="search-card">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="margin-bottom: 5px;" id="city-search">
+            <input type="text" id="cityInput" placeholder="Enter city name">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </nav>
-        </div>  
-        <div class="card" style="width: 90%;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card mt-3" style="width: 90%;" id="weather-card">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title" id="city">City Name</h5>
+            <div class="card-text" id="weather-info">Weather information will be displayed here.</div>
+            <a href="#" class="btn btn-primary" id="new-city-btn">New City?</a>
           </div>    
-      </div>
+        </div>
+      </aside>
     </div>
   </div>
 
-  <!-- Day.js -->
+
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-  <!-- jQuery -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/script.js"></script>
 </body>
