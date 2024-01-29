@@ -1,3 +1,7 @@
 #weather-card{ display: none;
   
 }
+
+#datetime-container{
+    margin-left: 15px;
+}
