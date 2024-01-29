@@ -31,4 +31,21 @@ function displayWeather(data) {
         <p>Wind Speed: ${windSpeed} m/s</p>
     `);
 }
+$("#search-card").submit(function (event) {
+    event.preventDefault();
+    var city = $("#cityInput").val().trim();
 
+    if (city !== "") {
+        fetchWeather(city)
+            .then(function (data) {
+                if (data) {
+                    displayWeather(data);
+                
+                }
+            });
+    }
+});
+
+$("#new-city-btn").click(function () {
+
+});
