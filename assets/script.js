@@ -23,6 +23,8 @@ function displayWeather(data) {
     const humidity = data.main.humidity;
     const windSpeed = data.wind.speed;
 
+    $("#weather-card").css("display", "block");
+
     $("#city").text("City: " + name);
     $("#weather-info").html(`
         <p>Weather: ${data.weather[0].main}</p>
@@ -31,7 +33,7 @@ function displayWeather(data) {
         <p>Wind Speed: ${windSpeed} m/s</p>
     `);
 }
-$("#search-card").submit(function (event) {
+$("#search-card").submit(function (event) { 
     event.preventDefault();
     var city = $("#cityInput").val().trim();
 
