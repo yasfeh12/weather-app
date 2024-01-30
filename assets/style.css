@@ -8,3 +8,23 @@
 
 .card-body{
     font-size: 30px;}
+
+    body{
+        background-color:#00416A;
+    }
+
+    #Search{
+        border-radius: 20px;
+    }
+
+    #datetime-id{
+        margin-left: 15px ;
+        color: #334d50;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+   #city-name{
+    font-size: 26px;
+    margin-left: 40px;
+   }

@@ -1,5 +1,3 @@
-console.log("hello world");
-
 var apiKey = "94a9dd50d9451c24e2dc7b65763db4db";
 
 function fetchWeather(city) {
@@ -50,6 +48,9 @@ $("#search-card").submit(function (event) {
     var city = $("#cityInput").val().trim();
 
     if (city !== "") {
+  
+        saveCityToLocalStorage(city);
+
         fetchWeather(city)
             .then(function (data) {
                 if (data) {
@@ -59,9 +60,24 @@ $("#search-card").submit(function (event) {
     }
 });
 
- $("#new-city-btn").click(function () {
+$("#new-city-btn").click(function () {
+ 
+    var savedCity = getCityFromLocalStorage();
+
+    if (savedCity) {
+      
+        $("#cityInput").val("");
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+
 });
 
+function saveCityToLocalStorage(city) {
+    localStorage.setItem("savedCity", city);
+}
+
+function getCityFromLocalStorage() {
+    return localStorage.getItem("savedCity");
+}
