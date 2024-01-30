@@ -23,10 +23,12 @@ function displayWeather(data) {
             const humidity = data.list[i].main.humidity;
             const windSpeed = data.list[i].wind.speed;
 
-   
+            const currentDate = dayjs().add(i, 'day');
+            const formattedDate = currentDate.format("dddd D MMMM");
+
             const $weatherCard = $(".weather-card").eq(i);
-            
-    
+
+            $weatherCard.find(".datetime-container").html(formattedDate + " " + '<i class="fas fa-calendar-days"></i>');
             $weatherCard.find(".city").text("City: " + name);
             $weatherCard.find(".icon").attr("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png");
             $weatherCard.find(".weather-info").html(`
@@ -36,7 +38,6 @@ function displayWeather(data) {
                 <p>Wind Speed: ${windSpeed} m/s</p>
             `);
 
-         
             $weatherCard.css("display", "block");
         }
     } else {
@@ -44,7 +45,7 @@ function displayWeather(data) {
     }
 }
 
-$("#search-card").submit(function (event) { 
+$("#search-card").submit(function (event) {
     event.preventDefault();
     var city = $("#cityInput").val().trim();
 
@@ -53,25 +54,14 @@ $("#search-card").submit(function (event) {
             .then(function (data) {
                 if (data) {
                     displayWeather(data);
-                
                 }
             });
     }
 });
 
-
-
-$("#new-city-btn").click(function () {
-
+ $("#new-city-btn").click(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  
-    const currentDate = dayjs();
-
-  
-    const formattedDateTime = currentDate.format("dddd D MMMM HH:mm");
-
-  
-    document.getElementById("datetime-container").innerHTML = formattedDateTime + " " + '<i class="fas fa-calendar-days"></i>';
 });
+
