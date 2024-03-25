@@ -1,30 +1,108 @@
 #main{ display: none;
-  
+    background-image: url(https://vastphotos.com/files/uploads/photos/11326/florida-beach-photo-l.jpg?v=20220715163155);
+    margin-top: 15px;
 }
+
+#header {
+    height: 35vh;
+    background-image: url(https://vastphotos.com/files/uploads/photos/11743/rainbow-on-beach-photo-l.jpg?v=20240219161230);
+    background-size: cover;
+    background-position: bottom; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
+
+}
+#header h1 {
+    font-size: 84px;
+    padding-left: 500px;
+    padding-bottom: 100px;
+    background: linear-gradient(to right, #ff1544, #ffa837e1); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+    text-shadow: -200px 75px 5px rgba(0, 0, 0, 0.178); 
+}
+
+
+
+
 
 #datetime-container{
     margin-left: 15px;
+    cursor: default;
+    
 }
 
 .card-body{
     font-size: 30px;}
 
     body{
-        background-color:#00416A;
+        background-image: url(https://vastphotos.com/files/uploads/photos/11010/abstract-splatter-painting-l.jpg?v=20220712073521);
+        background-size: cover;
     }
 
     #Search{
         border-radius: 20px;
+        background-color: #000000a8;
     }
 
     #datetime-id{
         margin-left: 15px ;
-        color: #334d50;
+        color: #000000;
         font-weight: 600;
         font-size: 20px;
+        cursor: default;
+
     }
 
    #city-name{
     font-size: 26px;
     margin-left: 40px;
+    cursor: default;
+
    }
+   #cityInput {
+    background-color: #424242be !important;
+    margin-left: 10px;
+    width: 300px;
+}
+#cityInput:focus {
+    background-color: #424242be !important; 
+    outline: none; 
+}
+#form-heading{
+    background: linear-gradient(to right, #ffffff, #000000); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+
+}
+.card-text weather-info{
+    cursor: default;
+}
+#weather-info{
+    cursor: default;
+}
+
+.btn-custom {
+    background-color: #c5c5c5c0; 
+    color: #2b2b2b; 
+    border-color:#2b2b2b; 
+}
+
+.btn-custom:hover {
+    color: #000000; 
+    background-color: #ffffffb0; 
+    border-color: #000000; 
+}
+
+@media screen and (min-width: 100px) and (max-width: 360px) {
+    #cityInput {
+      width: 140px;
+    }
+  }
+  
